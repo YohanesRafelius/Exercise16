@@ -7,30 +7,33 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start; /* kotak di kiri */
+            align-items: flex-start;     /* mulai dari atas */
             height: 100vh;
             margin: 0;
+            padding: 30px;
             background-color: #f0f0f0;
+
+            /* supaya posisinya vertikal (atas - bawah) */
+            flex-direction: column;
+            gap: 20px;
         }
 
         .square {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background-color: #ffc0cb;
-            margin: 20px;
             transition: all 0.5s ease;
         }
 
-        /* Square 1: On hover, it becomes longer (wider) */
+        /* Kotak atas: memanjang ke kanan */
         #square1:hover {
-            width: 200px;
+            width: 300px; /* memanjang ke kanan */
         }
 
-        /* Square 2: On hover, it becomes larger (increases both width and height) */
+        /* Kotak bawah: membesar ke bawah */
         #square2:hover {
-            width: 150px;
-            height: 150px;
+            height: 300px; /* membesar ke bawah */
         }
     </style>
 </head>
